@@ -22,12 +22,12 @@ const Header = () => {
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="ms-auto">
 							<LinkContainer to="/cart">
-								<Nav.Link className="py-0">
+								<Nav.Link className="py-0" active={false}>
 									<i className="fa fa-shopping-cart"></i> Koszyk
 								</Nav.Link>
 							</LinkContainer>
-							<LinkContainer to="/login">
-								<Nav.Link className="py-0">
+							<LinkContainer to="/login" className="">
+								<Nav.Link className="py-0" active={false}>
 									<i className="fa fa-user"></i> Zaloguj się
 								</Nav.Link>
 							</LinkContainer>
