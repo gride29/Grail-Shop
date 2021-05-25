@@ -1,15 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Message from '../components/Message';
-import {
-	Row,
-	Col,
-	ListGroup,
-	Image,
-	Form,
-	Card,
-	Button,
-} from 'react-bootstrap';
+import { Row, Col, ListGroup, Image, Card, Button } from 'react-bootstrap';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import { Link } from 'react-router-dom';
 
