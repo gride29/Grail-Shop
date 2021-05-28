@@ -99,7 +99,7 @@ const CartScreen = ({ match, location, history }) => {
 							<Button
 								type="button"
 								className="btn btn-block"
-								style={{ textAlign: 'center' }}
+								style={{ width: '100%' }}
 								disabled={cartItems.length === 0}
 								onClick={checkoutHandler}
 							>
