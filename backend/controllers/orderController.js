@@ -25,6 +25,7 @@ const addOrderItems = asyncHandler(async (req, res) => {
 			taxPrice,
 			shippingPrice,
 			totalPrice,
+			createdAt: Date.now(),
 		});
 
 		const createdOrder = await order.save();
@@ -69,4 +70,10 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
 	}
 });
 
-export { addOrderItems, getOrderById, updateOrderToPaid };
+const getMyOrders = asyncHandler(async (req, res) => {
+	const orders = await Order.find({ user: req.user._id });
+
+	res.json(orders);
+});
+
+export { addOrderItems, getOrderById, updateOrderToPaid, getMyOrders };
