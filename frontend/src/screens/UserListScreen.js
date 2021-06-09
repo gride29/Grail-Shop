@@ -62,7 +62,7 @@ const UserListScreen = ({ history }) => {
 									)}
 								</td>
 								<td>
-									<LinkContainer to={`/user/${user._id}/edit`}>
+									<LinkContainer to={`/admin/user/${user._id}/edit`}>
 										<Button variant="light" className="btn-sm">
 											<i className="fa fa-edit"></i>
 										</Button>
@@ -72,7 +72,7 @@ const UserListScreen = ({ history }) => {
 										className="btn-sm"
 										onClick={() => deleteHandler(user._id)}
 									>
-										<i className="fa fa-trash"></i>
+										<i className="fa fa-trash" style={{ color: 'black' }}></i>
 									</Button>
 								</td>
 							</tr>
