@@ -14,7 +14,7 @@ const reviewSchema = mongoose.Schema(
 const productSchema = mongoose.Schema({
 	user: {
 		type: mongoose.Schema.Types.ObjectId,
-		required: true,
+		required: false,
 		ref: 'User',
 	},
 	name: {
@@ -45,7 +45,7 @@ const productSchema = mongoose.Schema({
 	},
 	numReviews: {
 		type: Number,
-		required: true,
+		required: false,
 		default: 0,
 	},
 	price: {

@@ -31,7 +31,14 @@ const Header = () => {
 								</Nav.Link>
 							</LinkContainer>
 							{userInfo ? (
-								<NavDropdown title={userInfo.name} id="username">
+								<NavDropdown
+									title={
+										<>
+											<i className="fas fa-user"></i> Witaj {userInfo.name}
+										</>
+									}
+									id="username"
+								>
 									<LinkContainer to="/profile">
 										<NavDropdown.Item>Profil</NavDropdown.Item>
 									</LinkContainer>
@@ -42,19 +49,26 @@ const Header = () => {
 							) : (
 								<LinkContainer to="/login">
 									<Nav.Link active={false}>
-										<i className="fa fa-user"></i> Zaloguj się
+										<i className="fa fa-users"></i> Zaloguj się
 									</Nav.Link>
 								</LinkContainer>
 							)}
 							{userInfo && userInfo.isAdmin && (
-								<NavDropdown title="Panel Administratora" id="adminmenu">
+								<NavDropdown
+									title={
+										<>
+											<i className="fas fa-user-cog"></i> Panel Administratora
+										</>
+									}
+									id="adminmenu"
+								>
 									<LinkContainer to="/admin/userlist">
 										<NavDropdown.Item>Użytkownicy</NavDropdown.Item>
 									</LinkContainer>
-									<LinkContainer to="admin/productlist">
+									<LinkContainer to="/admin/productlist">
 										<NavDropdown.Item>Produkty</NavDropdown.Item>
 									</LinkContainer>
-									<LinkContainer to="admin/orderlist">
+									<LinkContainer to="/admin/orderlist">
 										<NavDropdown.Item>Zamówienia</NavDropdown.Item>
 									</LinkContainer>
 								</NavDropdown>

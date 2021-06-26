@@ -21,11 +21,7 @@ const UserEditScreen = ({ match, history }) => {
 	const { loading, error, user } = userDetails;
 
 	const userUpdate = useSelector((state) => state.userUpdate);
-	const {
-		loading: loadingUpdate,
-		error: errorUpdate,
-		success: successUpdate,
-	} = userUpdate;
+	const { error: errorUpdate, success: successUpdate } = userUpdate;
 
 	useEffect(() => {
 		if (successUpdate) {
@@ -49,7 +45,7 @@ const UserEditScreen = ({ match, history }) => {
 
 	return (
 		<>
-			<Link to="/admin/userlist" className="btn btn-light my-3">
+			<Link to="/admin/userlist" className="btn btn-dark my-3">
 				Wróć
 			</Link>
 			<FormContainer>
