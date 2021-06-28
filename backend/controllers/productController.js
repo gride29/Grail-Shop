@@ -14,9 +14,19 @@ const getProducts = asyncHandler(async (req, res) => {
 		  }
 		: {};
 
-	const products = await Product.find({ ...keyword });
+	const pageSize = 2;
+	const page = Number(req.query.pageNumber) || 1;
 
-	res.json(products);
+	const totalCountOfProducts = await Product.countDocuments({ ...keyword });
+	const products = await Product.find({ ...keyword })
+		.limit(pageSize)
+		.skip(pageSize * (page - 1));
+
+	res.json({
+		products,
+		page,
+		pages: Math.ceil(totalCountOfProducts / pageSize),
+	});
 });
 
 const getProductById = asyncHandler(async (req, res) => {
