@@ -162,7 +162,7 @@ const ProductScreen = ({ history, match }) => {
 									</ListGroup.Item>
 								))}
 								<ListGroup.Item>
-									<h3 className="mt-2">Wystaw recenzję</h3>
+									<h3 className="mt-3">Wystaw recenzję</h3>
 									{errorProductReview && (
 										<Message variant="danger">{errorProductReview}</Message>
 									)}
