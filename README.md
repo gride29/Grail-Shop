@@ -5,7 +5,7 @@ GRAILSHOP is an ecommerce website project, developed as a practice of my MERN st
 ## Demo
 Fully functioning app is available here: https://grailshop.herokuapp.com/. If you would like to test out admin features feel free to use these credentials:
 
-```js
+```
 login: admin@example.com
 password: password 
 ```
