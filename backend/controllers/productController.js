@@ -14,7 +14,7 @@ const getProducts = asyncHandler(async (req, res) => {
 		  }
 		: {};
 
-	const pageSize = 2;
+	const pageSize = 10;
 	const page = Number(req.query.pageNumber) || 1;
 
 	const totalCountOfProducts = await Product.countDocuments({ ...keyword });
@@ -144,6 +144,13 @@ const createProductReview = asyncHandler(async (req, res) => {
 	}
 });
 
+const getTopProducts = asyncHandler(async (req, res) => {
+	// -1 - ascending order
+	const products = await Product.find({}).sort({ rating: -1 }).limit(3);
+
+	res.json(products);
+});
+
 export {
 	getProducts,
 	getProductById,
@@ -151,4 +158,5 @@ export {
 	createProduct,
 	updateProduct,
 	createProductReview,
+	getTopProducts,
 };
