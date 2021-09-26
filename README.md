@@ -1,9 +1,9 @@
 # GRAILSHOP
 
-GRAILSHOP is an ecommerce website project, developed as a practice of my MERN stack skills. Frontend layer of this project is based on React and custom Bootstrap theme in terms of look, whereas backend layer is based on well known Node and Express. For quick and reliable state manegement I have chosen Redux.
+GrailShop is an ecommerce app, based on the MERN stack. Frontend portion of this project utilizes React and Bootstrap, whereas backend layer is based on well known Node and Express. Redux deals with state management inside the app.
 
 ## Demo
-Check it out here: https://grailshop.herokuapp.com/ 
+Live demo is available here: https://grailshop.herokuapp.com/ 
 
 ## Run locally
 
